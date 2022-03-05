@@ -505,7 +505,6 @@ img{
   margin: 20px auto 0 auto;
   padding: 5px;
   font-size: 18px;
-  width: 30%;
   border-radius: 5px;
 }
 .enlace-git:hover{
@@ -516,6 +515,6 @@ img{
 @media screen and (min-width: 768px){
 
   .enlace-git{
-      width: 100%;
+      width: 30%;
   }
 }

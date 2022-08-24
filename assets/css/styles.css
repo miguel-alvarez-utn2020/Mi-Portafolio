@@ -313,11 +313,18 @@ img{
   width: 85%;
 }
 .skills__js{
-  width: 65%;
+  width: 75%;
 }
 .skills__an{
+  width: 70%;
+}
+.skills__io{
+  width: 60%;
+}
+.skills__cap{
   width: 50%;
 }
+
 .skills__img{
   border-radius: .5rem;
 }

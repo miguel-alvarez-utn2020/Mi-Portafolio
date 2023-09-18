@@ -304,7 +304,7 @@ img{
   z-index: var(--z-back);
 }
 .skills__node{
-  width: 60%;
+  width: 70%;
 }
 .skills__html{
   width: 95%;
@@ -313,13 +313,13 @@ img{
   width: 85%;
 }
 .skills__js{
-  width: 75%;
+  width: 85%;
 }
 .skills__an{
-  width: 70%;
+  width: 75%;
 }
 .skills__io{
-  width: 60%;
+  width: 70%;
 }
 .skills__cap{
   width: 50%;

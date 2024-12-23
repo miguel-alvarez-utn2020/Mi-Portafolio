@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
+        <!-- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <title>Portfolio website complete</title>
     </head>
     <body>
@@ -16,7 +16,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Miguel</a>
+                    <a href="#" class="nav__logo">Miguel Alvarez</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -39,14 +39,13 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Miguel</span><br> Web Designer</h1>
+                    <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Miguel</span><br> Frontend Developer</h1>
 
                     <a href="#contact" class="button">Contacto</a>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/miguel-alvarez-4a9265225/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100000288583950" class="home__social-icon" target="_blank"><i class='bx bxl-facebook' ></i></a>
                     <a href="https://github.com/miguel-alvarez-utn2020?tab=repositories" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
                 </div>
 
@@ -66,14 +65,17 @@
                     
                     <div>
                         <h2 class="about__subtitle">Soy Miguel</h2>
-                        <p class="about__text">Un estudiante de técnico superior en sistemas informáticos de primer año de la universidad tecnológica
-                            nacional. Valoro mucho la capacitación y beneficios relacionados con la formación que la empresa pueda
-                            brindarme. Tengo un año de experiencia como desarrollador y me encanta seguir capacitándome día a día y
-                            tomar nuevos desafíos que puedan llevarme a alcanzar nuevos niveles en mi profesión. Busco brindarle a mi
-                            empleador ayuda y solución para llevar adelante los objetivos que disponga y las metas que desea lograr
-                            siendo completamente efectivo y de buen rendimiento. Llevo valores muy marcados desde mi niñes, como la
-                            responsabilidad, compromiso con el trabajo y el compañerismo, ya que estos tres puntos, son muy importantes
-                            a la hora de armar un equipo de trabajo sólido, que puede afrontar cualquier problema o proyecto.
+                        <p class="about__text">Un estudiante de tercer año de la carrera Técnico Superior en Sistemas Informáticos en la Universidad
+                            Tecnológica Nacional (UTN). Cuento con más de 3 años de experiencia como desarrollador frontend, durante
+                            los cuales he adquirido habilidades en desarrollo de software, resolución de problemas y trabajo en equipo.
+                            Valoro enormemente la formación continua y estoy comprometido con mi crecimiento profesional, buscando
+                            constantemente nuevos desafíos que me permitan mejorar y aportar valor a los proyectos en los que participo.
+                            Mi objetivo es contribuir al cumplimiento de los objetivos de la empresa a través de soluciones efectivas y de
+                            alto rendimiento.
+                            Desde mi niñez llevo valores profundamente marcados, como la responsabilidad, el compromiso, el trabajo en
+                            equipo y posteriormente, en el camino profesional, desarrolle la comunicación. Creo firmemente que estos
+                            principios son clave para construir equipos sólidos capaces de enfrentar cualquier problema o proyecto, y son
+                            los pilares que guían mi desempeño profesional y personal.
                             </p>           
                     </div>                                   
                 </div>
@@ -84,78 +86,144 @@
                 <h2 class="section-title large-line">Habilidades</h2>
 
                 <div class="skills__container bd-grid">          
-                    <div>
+                    <div class="skills__h-container">
                         <h2 class="skills__subtitle">Habilidades Desarolladas</h2>
-
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-redux skills__icon'></i>
-                                <span class="skills__name">REDUX, NGRX- Actualmente capacitándome</span>
+                                <img src="assets/img/icons/webpack.svg" class='skills__icon'>
+                                <span class="skills__name">Webpack 5 & Module Federation</span>
                             </div>
-                            <div class="skills__bar skills__cap">
+                            <div class="skills__bar skills__Webpack">
                                 
                             </div>
-                            <div>
-                                <span class="skills__percentage">-</span>
+                            <div >
+                                <span class="skills__percentage">20%</span>   
                             </div>
                         </div>
-
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-angular skills__icon'></i>
-                                <span class="skills__name">ANGULAR</span>
+                                <img src="assets/img/icons/react.svg" class='skills__icon'>
+                                <span class="skills__name">React</span>
                             </div>
-                            <div class="skills__bar skills__an">
+                            <!-- <div class="skills__bar skills__Webpack">
                                 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">75%</span>
-                            </div>
-                        </div>
-
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-angular skills__icon'></i>
-                                <span class="skills__name">IONIC</span>
-                            </div>
-                            <div class="skills__bar skills__io">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">70%</span>
+                            </div> -->
+                            <div >
+                                <span class="skills__percentage">Incoming</span>   
                             </div>
                         </div>
+                        <div class="skills__wrapper-ok">
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/typescript.svg" class='skills__icon'>
+                                    <span class="skills__name">Typescript</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__cap">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>   
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/redux.svg" class='skills__icon'>
+                                    <span class="skills__name">NGRX/Rxjs</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__cap">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>   
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/angular.svg" class='skills__icon'>
+                                    <span class="skills__name">ANGULAR</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__an">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
+                            </div>
+    
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/ionic.svg" class='skills__icon'>
+                                    <span class="skills__name">IONIC</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__io">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
+                            </div>
+    
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/nodejs.svg" class='skills__icon'>
+                                    <span class="skills__name">NODE</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__node">
+    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
+                            </div>
+    
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/javascript.svg" class='skills__icon' >
+                                    <span class="skills__name">JAVASCRIPT</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__js">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
+                            </div>
 
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-nodejs skills__icon'></i>
-                                <span class="skills__name">NODE</span>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/sass.svg" class='skills__icon' >
+                                    <span class="skills__name">Sass</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__js">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
                             </div>
-                            <div class="skills__bar skills__node">
 
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <img src="assets/img/icons/css3.svg" class='skills__icon' >
+                                    <span class="skills__name">CSS</span>
+                                </div>
+                                <!-- <div class="skills__bar skills__js">
+                                    
+                                </div> -->
+                                <div class="skills__ok">
+                                    <span class="skills__percentage">OK</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="skills__percentage">70%</span>
-                            </div>
-                        </div>
 
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
                         </div>
 
                     </div>
                     
-                    <div >              
+                    <div class="skills__wrapper-img-skills" >              
                         <img  src="assets/img/work3.jpg" alt="" class="skills__img">
+                        <div class="skills__wrapper-outstanding">
+                            <p>Destaco en la creación de interfaces modernas y funcionales, utilizando estándares de HTML, CSS y SCSS, aplicando metodologías como BEM para mantener un código limpio y escalable.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -324,10 +392,9 @@
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Miguel</p>
+            <p class="footer__title">Miguel Alvarez</p>
             <div class="footer__social">
                 <a href="https://www.linkedin.com/in/miguel-alvarez-4a9265225/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100000288583950" class="footer__icon" target="_blank"><i class='bx bxl-facebook' ></i></a>
                 <a href="https://github.com/miguel-alvarez-utn2020?tab=repositories" class="footer__icon" target="_blank"><i class='bx bxl-github' ></i></a>
             </div>
         </footer>

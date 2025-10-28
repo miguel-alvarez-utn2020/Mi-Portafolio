@@ -252,7 +252,8 @@ img{
   margin-bottom: var(--mb-2);
 }
 .about__img{
-  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 16px;
   -webkit-box-shadow: 4px 2px 5px 0px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    4px 2px 5px 0px rgba(50, 50, 50, 0.55);
   box-shadow:         4px 2px 5px 0px rgba(50, 50, 50, 0.55);
@@ -260,7 +261,6 @@ img{
 }
 .about__img img{
   width: 200px;
-  border-radius: .5rem;
 }
 
 /* ===== SKILLS =====*/
@@ -355,7 +355,7 @@ img{
   width: 50%;
 }
 .skills__Webpack{
-  width: 80%;
+  width: 40%;
 }
 
 
@@ -532,7 +532,7 @@ img{
   }
   .about__container{
     grid-template-columns: 1fr 2fr;
-    align-items: center;
+    align-items: flex-start;
     text-align: initial;
   }
   .about__img img{

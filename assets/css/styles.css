@@ -81,6 +81,7 @@ img{
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 /*===== CLASS CSS ===== */
@@ -224,10 +225,17 @@ img{
 }
 .home__img{
   position: absolute;
+  z-index: -1;
   right: 0;
   bottom: 0;
   width: 295px;
-  
+  display: none;
+}
+
+.home__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /*BUTTONS*/
@@ -253,14 +261,13 @@ img{
 }
 .about__img{
   overflow: hidden;
-  border-radius: 16px;
-  -webkit-box-shadow: 4px 2px 5px 0px rgba(50, 50, 50, 0.55);
-  -moz-box-shadow:    4px 2px 5px 0px rgba(50, 50, 50, 0.55);
-  box-shadow:         4px 2px 5px 0px rgba(50, 50, 50, 0.55);
+  border-radius: 10px;
   justify-self: center;
 }
 .about__img img{
-  width: 200px;
+  width: 250px;
+  height: 260px;
+  object-fit: contain;
 }
 
 /* ===== SKILLS =====*/
@@ -522,8 +529,11 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 457px;
-    bottom: 15%;
+    display: block;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    top: 8%;
   }
   .skills__container{
     grid-template-columns: repeat(2, 1fr);
@@ -536,7 +546,8 @@ img{
     text-align: initial;
   }
   .about__img img{
-    width: 300px;
+    width: 350px;
+    height: 350px;
   }
   .work__container{
     grid-template-columns: repeat(3, 1fr);
@@ -557,7 +568,7 @@ img{
     margin-right: auto;
   }
   .home__img{
-    right: 10%;
+    right: 15%;
   }
 }
 .about__text{

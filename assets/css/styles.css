@@ -529,7 +529,7 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    display: block;
+    display: none;
     overflow: hidden;
     width: 350px;
     height: 350px;
@@ -568,6 +568,7 @@ img{
     margin-right: auto;
   }
   .home__img{
+    display: block;
     right: 15%;
   }
 }

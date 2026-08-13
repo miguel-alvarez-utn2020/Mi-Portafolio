@@ -43,6 +43,8 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.about__img',{}); 
 sr.reveal('.about__subtitle',{delay: 400}); 
 sr.reveal('.about__text',{delay: 400}); 
+/* las tarjetas de datos entran desde la izquierda, en cascada */
+sr.reveal('.stat',{ origin: 'left', distance: '60px', interval: 120 });
 
 /*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle',{}); 
@@ -51,7 +53,7 @@ sr.reveal('.skills__data',{interval: 200});
 sr.reveal('.skills__img',{delay: 600});
 
 /*SCROLL WORK*/
-sr.reveal('.card_works',{interval: 200}); 
+sr.reveal('.case',{interval: 200}); 
 
 
 /*SCROLL CONTACT*/

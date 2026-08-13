@@ -1,0 +1,843 @@
+/*=============================================
+  TEMA — capa de color sobre styles.css
+
+  Toda la paleta vive en este bloque :root.
+  Para cambiar el aspecto del sitio entero,
+  se editan solo estas variables.
+
+  Este archivo se carga DESPUÉS de styles.css.
+  Borrarlo del index.html devuelve el diseño original.
+=============================================*/
+
+:root{
+  /* --- Superficies --- */
+  --bg:            #051413;   /* fondo general (coincide con el fondo de la foto) */
+  --bg-alt:        #06181A;   /* franjas alternas */
+  --surface:       #0A2124;   /* tarjetas */
+  --surface-2:     #0D2A2D;   /* tarjetas sobre tarjetas */
+  --border:        rgba(126, 231, 214, .14);
+
+  /* --- Acento (el del banner de LinkedIn) --- */
+  --accent:        #3FD1B8;
+  --accent-soft:   rgba(63, 209, 184, .12);
+  --accent-strong: #5FE3CC;
+
+  /* --- Texto --- */
+  --text:          #F2FAF8;
+  --text-muted:    #9FB8B4;
+  --text-dim:      #6F8C88;
+
+  /* --- Efectos --- */
+  --shadow:        0 10px 40px rgba(0, 0, 0, .45);
+  --radius:        .875rem;
+}
+
+/*===== Base =====*/
+body{
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3, p, span, a, li{
+  color: inherit;
+}
+
+/*===== Header =====*/
+.l-header{
+  background-color: rgba(4, 18, 15, .85);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.nav__logo,
+.nav__link{
+  color: var(--text);
+}
+
+.nav__link:hover::after,
+.active::after{
+  background-color: var(--accent);
+}
+
+.nav__toggle{
+  color: var(--text);
+}
+
+@media screen and (max-width: 768px){
+  .nav__menu{
+    background-color: var(--surface);
+    border-left: 1px solid var(--border);
+  }
+}
+
+/*===== Títulos de sección =====*/
+.section-title{
+  color: var(--text);
+  letter-spacing: -.5px;
+}
+
+.section-title::after{
+  background-color: var(--accent);
+  height: 3px;
+  border-radius: 999px;
+}
+
+/*===== Home =====*/
+.home__title-color{
+  color: var(--accent);
+}
+
+.home__social-icon{
+  color: var(--text-muted);
+  transition: color .25s;
+}
+
+.home__social-icon:hover{
+  color: var(--accent);
+}
+
+.button{
+  background-color: var(--accent);
+  color: #04120F;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(63, 209, 184, .25);
+}
+
+.button:hover{
+  background-color: var(--accent-strong);
+  box-shadow: 0 10px 30px rgba(63, 209, 184, .35);
+}
+
+/*===== Sobre mí =====*/
+.about{
+  background-color: var(--bg-alt);
+}
+
+.about__subtitle{
+  color: var(--accent);
+}
+
+.about__text{
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/*===== Habilidades =====*/
+.skills__subtitle{
+  color: var(--text);
+}
+
+.skills__data{
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  box-shadow: none;
+  transition: border-color .25s, transform .25s;
+}
+
+.skills__data:hover{
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.skills__name{
+  color: var(--text);
+}
+
+.skills__img,
+.skills__wrapper-img-skills{
+  border-radius: var(--radius);
+}
+
+/*===== Casos de proyecto =====*/
+.work{
+  background-color: var(--bg-alt);
+}
+
+.case{
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: border-color .25s, transform .25s;
+}
+
+.case:hover{
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.case__title{
+  color: var(--text);
+}
+
+.case__badge{
+  color: var(--accent);
+  background-color: var(--accent-soft);
+  border: 1px solid var(--border);
+}
+
+.case__ctx,
+.case__row{
+  color: var(--text-muted);
+}
+
+.case__row strong{
+  color: var(--text);
+}
+
+.case__result{
+  color: var(--text);
+  border-left-color: var(--accent);
+  background-color: var(--accent-soft);
+  padding: .65rem .85rem;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.case__link{
+  color: var(--accent);
+}
+
+.case__link:hover{
+  color: var(--accent-strong);
+}
+
+/*===== Enlace a GitHub =====*/
+.enlace-git{
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: fit-content;
+  margin: 2.5rem auto 0;
+  background-color: transparent;
+  transition: border-color .25s, color .25s;
+}
+
+.enlace-git:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/*===== Contacto / CV =====*/
+.contact a{
+  color: var(--accent);
+}
+
+/*===== Footer =====*/
+.footer{
+  background-color: #020C0A;
+  border-top: 1px solid var(--border);
+}
+
+.footer__title{
+  color: var(--text);
+}
+
+.footer__icon{
+  color: var(--text-muted);
+  transition: color .25s;
+}
+
+.footer__icon:hover{
+  color: var(--accent);
+}
+
+/*===== Utilidades heredadas que ya no aplican en oscuro =====*/
+.box-shadow-box{
+  box-shadow: none;
+}
+
+/*===== Layout de los casos =====*/
+.cases{
+  display: grid;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px){
+  .cases{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1100px;
+  }
+}
+
+.case{
+  padding: 1.75rem;
+  text-align: left;
+}
+
+.case__head{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem .75rem;
+  margin-bottom: .85rem;
+}
+
+.case__title{
+  font-size: 1.05rem;
+  font-weight: var(--font-semi);
+  margin: 0;
+}
+
+.case__badge{
+  font-size: .78rem;
+  font-weight: var(--font-semi);
+  border-radius: 999px;
+  padding: .25rem .7rem;
+  white-space: nowrap;
+}
+
+.case__ctx,
+.case__row,
+.case__result{
+  font-size: .9rem;
+  line-height: 1.65;
+  margin-bottom: .6rem;
+}
+
+.case__result{
+  font-weight: var(--font-semi);
+  border-left: 3px solid var(--accent);
+  margin-top: 1rem;
+}
+
+.case__link{
+  display: inline-block;
+  margin-top: .35rem;
+  font-size: .875rem;
+  font-weight: var(--font-semi);
+}
+
+/*===== Bloque de datos (reemplaza la segunda foto) =====*/
+.stats{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-content: center;
+}
+
+.stat{
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1rem;
+  text-align: center;
+  transition: border-color .25s, transform .25s;
+}
+
+.stat:hover{
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.stat__num{
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.stat__label{
+  display: block;
+  margin-top: .35rem;
+  font-size: .8rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+/*===== Texto del About: alineado a la izquierda, sin ríos =====*/
+.about__text{
+  text-align: left;
+}
+
+/*===== Habilidades: alinear la grilla con la imagen =====*/
+.skills__subtitle{
+  display: none;              /* redundante con el título de sección */
+}
+
+.skills__container{
+  align-items: start;
+}
+
+.skills__h-container{
+  margin-top: 0;
+}
+
+/*===== Foto del hero con fondo orgánico =====*/
+.home__img{
+  overflow: visible;   /* la plantilla lo recorta y taparia la mancha */
+}
+
+
+
+.home__img img{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+
+/* La foto trae su propio fondo: se difumina el borde para que no se vea el rectangulo */
+.home__img img{
+  -webkit-mask-image: radial-gradient(ellipse 58% 62% at 50% 46%, #000 62%, transparent 94%);
+          mask-image: radial-gradient(ellipse 58% 62% at 50% 46%, #000 62%, transparent 94%);
+}
+
+/*===== Mobile: mostrar la foto del inicio =====*/
+@media screen and (max-width: 767px){
+  .home{
+    padding-top: 1rem;
+  }
+
+  .home__img{
+    display: block;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    z-index: 0;
+    order: -1;                 /* la foto arriba del texto */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.25rem;
+    justify-self: center;
+  }
+
+  .home__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/*===== Mobile: foto del inicio arriba a la derecha =====*/
+@media screen and (max-width: 767px){
+  .home{
+    position: relative;
+  }
+
+  .home__img{
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: -1.25rem;
+    bottom: auto;
+    left: auto;
+    z-index: 0;
+    width: 175px;
+    height: 175px;
+    margin: 0;
+  }
+
+  .home__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .home__data{
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/*===== Hero: tagline, acciones y altura =====*/
+.home{
+  height: auto;
+  min-height: calc(100vh - var(--header-height));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  align-content: center;
+}
+
+.home__tagline{
+  margin-top: 1.25rem;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.home__actions{
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.home__social{
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.home__social-icon{
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 767px){
+  .home__tagline{
+    font-size: .95rem;
+    max-width: 100%;
+  }
+}
+
+/*===== Ajustes finos del hero =====*/
+.home{
+  min-height: 82vh;
+}
+
+.home__actions{
+  align-items: center;
+}
+
+.home__social{
+  align-self: center;
+  margin: 0;
+  top: auto;
+  gap: 1.25rem;
+}
+
+.home__social-icon{
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+/*===== Hero: iconos debajo de la foto =====*/
+.home__side{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.home__side .home__social{
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px){
+  .home__side{
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .home__side .home__img{
+    position: static;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .home__side{
+    position: absolute;
+    top: 1.25rem;
+    right: -1.25rem;
+    gap: .75rem;
+  }
+
+  .home__side .home__img{
+    position: static;
+    top: auto;
+    right: auto;
+  }
+
+  .home__side .home__social-icon{
+    font-size: 1.4rem;
+  }
+}
+
+/*=============================================
+  ESTRUCTURA — un solo contenedor para todo
+
+  El problema original: .home__img usaba
+  position:absolute con right:15% respecto de
+  la ventana, mientras el texto vivía dentro de
+  .bd-grid (1024px centrado). Nunca alineaban.
+
+  Solución: el hero pasa a ser una grilla real
+  de dos columnas y todas las secciones comparten
+  el mismo ancho máximo.
+=============================================*/
+
+:root{
+  --container: 1024px;
+}
+
+.bd-grid,
+.cases{
+  max-width: var(--container);
+}
+
+@media screen and (min-width: 768px){
+  /* Hero: dos columnas reales, sin absolute */
+  .home{
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .home__data{
+    align-self: center;
+  }
+
+  .home__side{
+    position: static;
+    transform: none;
+    top: auto;
+    right: auto;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .home__img{
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .home__img{
+    width: 360px;
+    height: 360px;
+  }
+}
+
+/*===== Mobile: sin padding superior en el hero =====*/
+@media screen and (max-width: 767px){
+  .home{
+    padding-top: 0;
+  }
+}
+
+/*===== Iconos sociales clickeables =====*/
+/* .home__img traía z-index:-1 y mandaba la columna detrás del fondo */
+.home__side{
+  position: relative;
+  z-index: 2;
+}
+
+.home__img{
+  z-index: auto;
+}
+
+.home__side .home__social{
+  position: relative;
+  z-index: 3;
+}
+
+.home__social-icon{
+  pointer-events: auto;
+}
+
+/*===== Mobile: foto arriba a la derecha (se reafirma tras la refactorización) =====*/
+@media screen and (max-width: 767px){
+  .home__side{
+    position: absolute;
+    top: 1.25rem;
+    right: -1.25rem;
+    z-index: 2;
+    gap: .6rem;
+  }
+
+  .home__img{
+    width: 165px;
+    height: 165px;
+  }
+
+  .home__side .home__social-icon{
+    font-size: 1.35rem;
+  }
+}
+
+/*===== Mobile: casos a borde completo, sin radio ni bordes laterales =====*/
+@media screen and (max-width: 767px){
+  .cases{
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .case{
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+
+
+/*===== Mobile: enlace a GitHub sin borde y sin ícono =====*/
+@media screen and (max-width: 767px){
+  .enlace-git .bx{
+    display: none;
+  }
+}
+
+
+/*===== Mobile: enlace a GitHub, sin borde ni subrayado =====*/
+@media screen and (max-width: 767px){
+  .enlace-git{
+    border: 0;
+    border-radius: 0;
+    padding: 0 10px;
+    margin-top: 2rem;
+    background-color: transparent;
+    /* subrayado fijo: comunica que es un link */
+    text-decoration: underline;
+    text-decoration-color: var(--text-muted);   /* #9FB8B4, igual que el texto */
+    text-underline-offset: 4px;
+  }
+
+  .enlace-git .bx{
+    display: none;
+  }
+}
+
+/*===== Mobile: sin fondo al tocar el enlace =====*/
+@media screen and (max-width: 767px){
+  .enlace-git:hover,
+  .enlace-git:focus,
+  .enlace-git:active{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .enlace-git{
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/*===== Neutraliza el hover heredado de styles.css =====*/
+/* traía border 1px #0E2431 y fondo #F7F7F7: corría el layout y aclaraba el botón */
+.enlace-git:hover,
+.enlace-git:focus,
+.enlace-git:active{
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media screen and (max-width: 767px){
+  .enlace-git,
+  .enlace-git:hover,
+  .enlace-git:focus,
+  .enlace-git:active{
+    border: 0;                 /* ancho en 0 siempre: nada se mueve */
+    background-color: transparent;
+  }
+}
+
+/*===== Tablet (768-1023px): la plantilla ocultaba la foto =====*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .home__img{
+    display: block;
+    width: 260px;
+    height: 260px;
+  }
+
+  .home{
+    column-gap: 2rem;
+  }
+}
+
+/*===== Escalón tipográfico intermedio (768-1023px) =====*/
+/* la plantilla saltaba de mobile a desktop sin paso intermedio */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  :root{
+    --big-font-size: 2.4rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: .95rem;
+  }
+
+  .home__title{
+    line-height: 1.15;
+  }
+
+  .home__tagline{
+    font-size: .95rem;
+  }
+
+  .section-title{
+    font-size: 1.6rem;
+  }
+
+  .stat__num{
+    font-size: 1.6rem;
+  }
+
+  .stat__label{
+    font-size: .75rem;
+  }
+
+  .case__title{
+    font-size: 1rem;
+  }
+}
+
+/*===== Tablet: foto más grande y hero sin aire de más =====*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .home__img{
+    width: 340px;
+    height: 340px;
+  }
+
+  .home{
+    min-height: 0;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+/*===== Ajustes finos de tamaño =====*/
+@media screen and (max-width: 767px){
+  .home__img{
+    width: 190px;
+    height: 190px;
+  }
+
+  :root{
+    --big-font-size: 2.15rem;
+    --normal-font-size: 1rem;
+  }
+
+  .home__tagline{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .home__img{
+    width: 300px;
+    height: 300px;
+  }
+}
